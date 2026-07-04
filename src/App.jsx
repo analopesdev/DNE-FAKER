@@ -188,7 +188,7 @@ function CertificadoScreen({ student, onBack }) {
 
 // ── CardScreen DNE ────────────────────────────────────────────────────────────
 function CardScreenDne({ student, onQrClick }) {
-  const validationUrl = `https://unip.up.railway.app/${student.urlName}/DNE/${student.token}/AHJSHTESHDHSADHUWQYESDHASJKDKDWQUWQGDW;DHAFGDDFJDSFGIFUSAUFGUDSAOFUSIDFVSADF`
+  const validationUrl = `${window.location.origin}/${student.urlName}/DNE/${student.token}/AHJSHTESHDHSADHUWQYESDHASJKDKDWQUWQGDW;DHAFGDDFJDSFGIFUSAUFGUDSAOFUSIDFVSADF`
 
   return (
     <div style={{ minHeight: '100vh', backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', fontFamily: "'Segoe UI', system-ui, sans-serif" }}>
@@ -231,7 +231,7 @@ function CardScreenDne({ student, onQrClick }) {
 
 // ── CardScreen UNIP ───────────────────────────────────────────────────────────
 function CardScreenUnip({ student, onQrClick }) {
-  const validationUrl = `https://unip.up.railway.app/VALIDATE/${student.urlName}/UNIP/${onlyDigits(student.rg)}/${student.token}/${QR_PADDING}`
+  const validationUrl = `${window.location.origin}/VALIDATE/${student.urlName}/UNIP/${onlyDigits(student.rg)}/${student.token}/${QR_PADDING}`
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#E8EBF5', fontFamily: "'Segoe UI', system-ui, sans-serif", display: 'flex', flexDirection: 'column' }}>
